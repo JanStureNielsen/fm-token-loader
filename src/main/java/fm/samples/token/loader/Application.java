@@ -15,7 +15,7 @@ import java.io.IOException;
 )
 public class Application implements Runnable {
     @Option(
-        names = {"--browser-command"},
+        names = {"--browser"},
         description = "Launch browser command.",
         defaultValue = "google-chrome")
     private String browserCommand;
