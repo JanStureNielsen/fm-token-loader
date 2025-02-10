@@ -18,7 +18,7 @@ public class Application implements Runnable {
         names = {"--browser"},
         description = "Launch browser command.",
         defaultValue = "google-chrome")
-    private String browserCommand;
+    private String browser;
 
     @Option(
         names = {"--number"},
@@ -33,7 +33,7 @@ public class Application implements Runnable {
 
     @Override
     public void run() {
-        var loader = new TokenLoader(browserCommand, launchNumber, url);
+        var loader = new TokenLoader(browser, launchNumber, url);
 
         try {
             loader.start();
