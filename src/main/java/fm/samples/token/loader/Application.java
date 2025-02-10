@@ -20,14 +20,14 @@ public class Application implements Runnable {
     private String url;
 
     @Option(
-        names = {"--no-chrome"},
-        description = "Don't launch a chrome tab for each user.",
-        defaultValue = "false")
-    private boolean noChrome;
+        names = {"--browser-command"},
+        description = "Launch browser command.",
+        defaultValue = "google-chrome")
+    private String browserCommand;
 
     @Override
     public void run() {
-        var loader = new TokenLoader(url, noChrome);
+        var loader = new TokenLoader(url, browserCommand);
 
         try {
             loader.start();

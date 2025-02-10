@@ -4,17 +4,17 @@ import java.io.IOException;
 
 public class TokenLoader {
     private final String url;
-    private final boolean chrome;
+    private final String browserCommand;
 
-    public TokenLoader(String url, boolean noChrome) {
+    public TokenLoader(String url, String browserCommand) {
         this.url = url;
-        this.chrome = !noChrome;
+        this.browserCommand = browserCommand;
     }
 
     public void start() throws IOException {
-        var chrome = new ProcessBuilder("google-chrome", url).start();
+        var browser = new ProcessBuilder(browserCommand, url).start();
 
-        System.out.format("Launching %s in chrome %s%n", url, chrome);
+        System.out.format("%s %s%n", browser, url);
     }
 
 }
