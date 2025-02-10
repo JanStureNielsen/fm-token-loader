@@ -29,7 +29,7 @@ public class Application implements Runnable {
     @Option(
         names = {"--delay"},
         description = "Seconds delay between launches.",
-        defaultValue = "5")
+        defaultValue = "0")
     private int secondsDelay;
 
     @Parameters(
