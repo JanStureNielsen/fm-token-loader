@@ -33,7 +33,7 @@ public class Application implements Runnable {
 
     @Override
     public void run() {
-        var loader = new TokenLoader(browserCommand, url);
+        var loader = new TokenLoader(browserCommand, launchNumber, url);
 
         try {
             loader.start();
