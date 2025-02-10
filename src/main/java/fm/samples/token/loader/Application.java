@@ -14,16 +14,16 @@ import java.io.IOException;
         description = "Use FM token API to sign-in users."
 )
 public class Application implements Runnable {
-    @Parameters(
-        index = "0",
-        description = "URL to deep-link")
-    private String url;
-
     @Option(
         names = {"--browser-command"},
         description = "Launch browser command.",
         defaultValue = "google-chrome")
     private String browserCommand;
+
+    @Parameters(
+        index = "0",
+        description = "URL to deep-link")
+    private String url;
 
     @Override
     public void run() {
