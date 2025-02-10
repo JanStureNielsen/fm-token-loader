@@ -34,7 +34,7 @@ public class Application implements Runnable {
 
     @Parameters(
         index = "0",
-        description = "URL to deep-link",
+        description = "URL to launch",
         defaultValue = "https://www.example.com")
     private String url;
 
