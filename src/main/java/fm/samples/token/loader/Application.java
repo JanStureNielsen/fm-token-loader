@@ -1,6 +1,5 @@
 package fm.samples.token.loader;
 
-import java.util.Arrays;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
