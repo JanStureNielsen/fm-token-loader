@@ -5,6 +5,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import java.io.IOException;
+
 @Command(
         name = "FM Token Loader",
         mixinStandardHelpOptions = true,
@@ -18,14 +20,20 @@ public class Application implements Runnable {
     private String url;
 
     @Option(
-        names = {"--chrome"},
-        description = "Launch each user in chrome.",
+        names = {"--no-chrome"},
+        description = "Don't launch a chrome tab for each user.",
         defaultValue = "false")
-    private boolean chrome;
+    private boolean noChrome;
 
     @Override
     public void run() {
-        System.out.format("Launching %s in chrome %s%n", url, chrome);
+        var loader = new TokenLoader(url, noChrome);
+
+        try {
+            loader.start();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void main(String[] args) {
