@@ -5,7 +5,6 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-
 @Command(
         name = "FM Token Loader",
         mixinStandardHelpOptions = true,
@@ -19,9 +18,9 @@ public class Application implements Runnable {
     private String url;
 
     @Option(
-            names = {"--chrome"},
-            description = "Launch each user in chrome.",
-            defaultValue = "false")
+        names = {"--chrome"},
+        description = "Launch each user in chrome.",
+        defaultValue = "false")
     private boolean chrome;
 
     @Override
