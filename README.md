@@ -1,6 +1,6 @@
-# FM token loader sample
+# URL loader sample
 
-This sample creates tokens, signs-in, and creates a deeplink for a user.
+This sample creates loads a URL multiple times, optionall with authenticated user(s).
 
 ## Building
 
@@ -12,8 +12,8 @@ mvn package
 
 ## Running
 
-To run FM Token Loader application:
+To run URL Loader application:
 
 ```
-java -jar fm-token-loader.jar [name]
+java -jar url-loader.jar [name]
 ```
