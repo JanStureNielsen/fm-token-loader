@@ -19,8 +19,8 @@ public class TokenLoader {
     public void start() throws IOException, InterruptedException {
         for (int i = 0; i < number; i++) {
             var browser = new ProcessBuilder(browserCommand, url).start();
-            Thread.sleep(Duration.ofSeconds(secondsDelay));
             System.out.format("%d %s %s%n", i, browser, url);
+            Thread.sleep(Duration.ofSeconds(secondsDelay));
         }
     }
 
