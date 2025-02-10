@@ -20,6 +20,12 @@ public class Application implements Runnable {
         defaultValue = "google-chrome")
     private String browserCommand;
 
+    @Option(
+        names = {"--number"},
+        description = "Number of URLs to launch.",
+        defaultValue = "5")
+    private int launchNumber;
+
     @Parameters(
         index = "0",
         description = "URL to deep-link")
