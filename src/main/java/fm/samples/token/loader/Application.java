@@ -44,12 +44,12 @@ public class Application implements Runnable {
 
         try {
             loader.start();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (IOException | InterruptedException x) {
+            throw new RuntimeException(x);
         }
     }
 
-    public static void main(String[] args) {
+git    public static void main(String[] args) {
         int exitCode = new CommandLine(new Application()).execute(args);
 
         System.exit(exitCode);
