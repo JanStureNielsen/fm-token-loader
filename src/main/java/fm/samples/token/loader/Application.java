@@ -27,7 +27,7 @@ public class Application implements Runnable {
 
     @Override
     public void run() {
-        var loader = new TokenLoader(url, browserCommand);
+        var loader = new TokenLoader(browserCommand, url);
 
         try {
             loader.start();
