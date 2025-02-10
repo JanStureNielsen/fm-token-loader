@@ -26,6 +26,12 @@ public class Application implements Runnable {
         defaultValue = "5")
     private int launchNumber;
 
+    @Option(
+        names = {"--delay"},
+        description = "Seconds delay between launches.",
+        defaultValue = "5")
+    private int secondsDelay;
+
     @Parameters(
         index = "0",
         description = "URL to deep-link",
